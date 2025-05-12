@@ -144,6 +144,13 @@ ifeq 'mbed' '$(PLATFORM)'
 include $(NO-OS)/tools/scripts/mbed.mk
 endif
 
+<<<<<<< HEAD
+=======
+ifeq 'win' '$(PLATFORM)'
+include $(NO-OS)/tools/scripts/win.mk
+endif
+
+>>>>>>> e93ba1f86 (tools: scripts: win.mk : Add support for WIN platform in Makefile)
 #------------------------------------------------------------------------------
 #                            COMMON COMPILER FLAGS                             
 #------------------------------------------------------------------------------
