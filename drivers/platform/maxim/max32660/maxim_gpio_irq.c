@@ -265,7 +265,7 @@ static int max_gpio_irq_unregister_callback(struct no_os_irq_ctrl_desc *desc,
  * @param trig_l - the trigger condition.
  * @return 0 in case of success, errno error codes otherwise
  */
-static int max_gpio_irq_trigger_level_set(struct no_os_irq_ctrl_desc *desc,
+static int32_t max_gpio_irq_trigger_level_set(struct no_os_irq_ctrl_desc *desc,
 		uint32_t irq_id,
 		enum no_os_irq_trig_level trig)
 {
@@ -377,7 +377,7 @@ const struct no_os_irq_platform_ops max_gpio_irq_ops = {
 	.unregister_callback = (int32_t (*)())max_gpio_irq_unregister_callback,
 	.enable = (int32_t (*)())max_gpio_irq_enable,
 	.disable = (int32_t (*)())max_gpio_irq_disable,
-	.trigger_level_set = (int32_t (*)())max_gpio_irq_trigger_level_set,
+	.trigger_level_set = max_gpio_irq_trigger_level_set,
 	.global_enable = (int32_t (*)())max_gpio_irq_global_enable,
 	.global_disable = (int32_t (*)())max_gpio_irq_global_disable,
 	.set_priority = (int32_t (*)())(max_gpio_irq_set_priority),
